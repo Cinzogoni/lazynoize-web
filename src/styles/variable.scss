@@ -1,0 +1,10 @@
+$main-text-font: "Poppins", sans-serif;
+$main-text-color: #ffff;
+
+$shadow-color: rgba(222, 184, 135, 0.5);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

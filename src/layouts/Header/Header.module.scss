@@ -1,0 +1,40 @@
+@use "/src/styles/variable.scss" as *;
+
+.header-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .img {
+    margin: 16px 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      filter: drop-shadow(5px 5px 10px $shadow-color);
+    }
+  }
+
+  .navbar {
+    width: 512px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .title {
+      font-size: 2.4rem;
+      margin: 16px 12px;
+      font-weight: 700;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
