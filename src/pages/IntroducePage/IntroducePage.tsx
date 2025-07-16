@@ -4,12 +4,11 @@ const cx = classNames.bind(styles);
 
 import { useTransPage } from "../../provider/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
+import { useState } from "react";
 
 function IntroducePage() {
-  const { currentPageId, visible } = useTransPage();
-
-  console.log("Current Page ID (from context):", currentPageId);
-  console.log("Visible (from context):", visible);
+  const { currentPageId } = useTransPage();
+  const [visible, IsVisible] = useState<boolean>(false);
 
   return (
     <div className={cx(pageNameClasses.int)}>
