@@ -2,9 +2,12 @@ import styles from "./IntroducePage.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
+import { useTransPage } from "../../provider/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
 
 function IntroducePage() {
+  const { currentPageId } = useTransPage();
+
   return (
     <div className={cx(pageNameClasses.int)}>
       <h1

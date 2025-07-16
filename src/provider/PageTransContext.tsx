@@ -1,21 +1,28 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState, useContext } from "react";
 
 interface TransitionContextType {
   currentPageId: string;
-  setCurrentPageId: (id: string) => void;
   handleTransitionPage: (id: string) => void;
 }
 
-const TransitionContext = createContext<TransitionContextType | undefined>(
-  undefined
-);
+const defaultContextValue: TransitionContextType = {
+  currentPageId: "int-page",
+  handleTransitionPage: () => {
+    console.warn(
+      "handleTransitionPage was called without the PageTransProvider"
+    );
+  },
+};
+
+export const TransitionContext =
+  createContext<TransitionContextType>(defaultContextValue);
 
 interface PageTransProviderProps {
   children: ReactNode;
 }
 
-function PageTransProvider({ children }: PageTransProviderProps) {
-  const [currentPageId, setCurrentPageId] = useState<string>("");
+export function PageTransProvider({ children }: PageTransProviderProps) {
+  const [currentPageId, setCurrentPageId] = useState<string>("int-page");
 
   const handleTransitionPage = (id: string) => {
     setCurrentPageId(id);
@@ -23,9 +30,10 @@ function PageTransProvider({ children }: PageTransProviderProps) {
 
   const contextValue: TransitionContextType = {
     currentPageId,
-    setCurrentPageId,
     handleTransitionPage,
   };
+
+  //   console.log("Check currentPageID: ", currentPageId);
 
   return (
     <TransitionContext.Provider value={contextValue}>
@@ -34,4 +42,6 @@ function PageTransProvider({ children }: PageTransProviderProps) {
   );
 }
 
-export { TransitionContext, PageTransProvider };
+export function useTransPage() {
+  return useContext(TransitionContext);
+}
