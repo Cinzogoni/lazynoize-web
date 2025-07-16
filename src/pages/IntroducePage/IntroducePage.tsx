@@ -6,7 +6,10 @@ import { useTransPage } from "../../provider/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
 
 function IntroducePage() {
-  const { currentPageId } = useTransPage();
+  const { currentPageId, visible } = useTransPage();
+
+  console.log("Current Page ID (from context):", currentPageId);
+  console.log("Visible (from context):", visible);
 
   return (
     <div className={cx(pageNameClasses.int)}>
