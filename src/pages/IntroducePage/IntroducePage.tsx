@@ -1,0 +1,21 @@
+import styles from "./IntroducePage.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
+
+import { pageNameClasses } from "../../layouts/Header/Header";
+
+function IntroducePage() {
+  return (
+    <div className={cx(pageNameClasses.int)}>
+      <h1
+        style={{
+          fontSize: "3.2rem",
+        }}
+      >
+        Giới thiệu về team
+      </h1>
+    </div>
+  );
+}
+
+export default IntroducePage;

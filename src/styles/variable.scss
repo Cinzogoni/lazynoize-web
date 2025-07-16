@@ -3,6 +3,8 @@ $main-text-color: #ffff;
 
 $shadow-color: rgba(222, 184, 135, 0.5);
 
+$page-bg-color: rgba(0, 0, 0, 0.75);
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;

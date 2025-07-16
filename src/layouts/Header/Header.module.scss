@@ -28,7 +28,10 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    .title {
+    .int-page,
+    .pro-page,
+    .ser-page,
+    .cont-page {
       font-size: 2.4rem;
       margin: 16px 12px;
       font-weight: 700;
