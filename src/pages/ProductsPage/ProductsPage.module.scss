@@ -16,13 +16,34 @@
     .title {
       font-size: 3.2rem;
     }
-
-    .products {
-      padding: 12px;
-      margin: 0 auto;
+    .pro-box {
       display: flex;
       align-items: center;
-      justify-content: center;
+
+      .products {
+        width: 100%;
+        max-width: 1920px;
+        padding: 12px;
+        margin: 6px auto;
+        box-shadow: 2px 2px 3px $shadow-color;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        .pro-frame {
+          width: 330px;
+          height: 120px;
+          margin: 0 6px;
+          padding: 0 6px 0 6px;
+          background-color: $shadow-color;
+          border: 1px solid $border-color;
+          @include border-radius(15px 15px 15px 15px);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 }
