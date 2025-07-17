@@ -27,21 +27,6 @@
 
   overflow-y: auto;
   overflow-x: hidden;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 50px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $frame-background-color;
-    border-radius: 50px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-color;
-    border-radius: 50px;
-  }
 }
 
 .col {

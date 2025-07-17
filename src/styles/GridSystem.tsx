@@ -1,4 +1,4 @@
-import styles from "../GridSystem/GridSystem.module.scss";
+import styles from "../styles/GridSystem.module.scss";
 import classNames from "classnames/bind";
 import { ReactNode, memo } from "react";
 

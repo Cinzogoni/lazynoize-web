@@ -13,8 +13,24 @@
   .pro-cus {
     margin: 6px 0;
 
-    .title {
-      font-size: 3.2rem;
+    .scroll {
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        font-size: 3.2rem;
+      }
+      .next-prev {
+        .prev,
+        .next {
+          width: 44px;
+          height: 44px;
+          color: black;
+          background-color: white;
+          border-radius: 90%;
+          margin-left: 18px;
+        }
+      }
     }
     .pro-box {
       display: flex;
@@ -22,7 +38,7 @@
 
       .products {
         width: 100%;
-        max-width: 1920px;
+        max-width: 1584px;
         padding: 12px;
         margin: 6px auto;
         box-shadow: 2px 2px 3px $shadow-color;
@@ -31,7 +47,7 @@
         overflow-x: auto;
 
         .pro-frame {
-          width: 330px;
+          width: 220px;
           height: 120px;
           margin: 0 6px;
           padding: 0 6px 0 6px;
@@ -42,6 +58,102 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1919px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 220px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 180px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 630px) and (max-width: 767px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 430px) and (max-width: 629px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 200px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 429px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 120px;
+            height: 120px;
+          }
         }
       }
     }
