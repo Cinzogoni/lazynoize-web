@@ -8,13 +8,12 @@
   justify-content: center;
 
   .img {
-    margin: 16px 32px;
     display: flex;
     align-items: center;
     cursor: pointer;
 
     .logo {
-      width: 48px;
+      width: 100px;
       height: 48px;
       object-fit: cover;
       filter: drop-shadow(5px 5px 10px $shadow-color);
@@ -22,7 +21,7 @@
   }
 
   .navbar {
-    width: 512px;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,11 +31,30 @@
     .pro-page,
     .ser-page,
     .cont-page {
-      font-size: 2.4rem;
-      margin: 16px 12px;
+      font-size: clamp(0.85rem, 2.2vw, 2.4rem);
+      padding: 12px;
       font-weight: 700;
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-frame {
+    .img {
+      .logo {
+        width: 52.1px;
+        height: 25px;
+      }
+    }
+    .navbar {
+      .int-page,
+      .pro-page,
+      .ser-page,
+      .cont-page {
+        padding: 6px;
       }
     }
   }

@@ -20,7 +20,7 @@ function Header() {
   return (
     <div className={cx("header-frame")}>
       <div className={cx("img")}>
-        <img src="/public/assets/img/logo.jpg" className={cx("logo")} />
+        <img src="/public/assets/img/logo.png" className={cx("logo")} />
       </div>
 
       <div className={cx("navbar")}>
