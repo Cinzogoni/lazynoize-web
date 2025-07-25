@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 function Footer() {
   return (
     <div className={cx("footer-frame")}>
-      <h1 className={cx("copyright")}>© 2025 LazyNoize, All Rights Reserved</h1>
+      <h1 className={cx("copyright")}>© 2026 LazyNoize, All Rights Reserved</h1>
     </div>
   );
 }

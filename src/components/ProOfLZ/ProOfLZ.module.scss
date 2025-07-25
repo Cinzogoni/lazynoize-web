@@ -1,0 +1,127 @@
+@use "/src/styles/variable.scss" as *;
+
+.pro-team {
+  margin: 6px 0;
+
+  .scroll {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      font-size: clamp(1.2rem, 2.2vw, 3.2rem);
+    }
+    .next-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .prev,
+      .next {
+        width: clamp(18px, 2.2vw, 44px);
+        height: clamp(18px, 2.2vw, 44px);
+        color: black;
+        background-color: white;
+        border-radius: 90%;
+        margin-left: clamp(4px, 2.2vw, 18px);
+      }
+    }
+  }
+
+  .pro-boxes {
+    width: 100%;
+    height: 200px;
+  }
+
+  .pro-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .products {
+    padding: 12px;
+    margin: 6px auto;
+    box-shadow: 2px 2px 3px $shadow-color;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .pro-frame {
+    width: 286px;
+    height: 160px;
+    margin: 0 6px;
+    padding: 0 6px 0 6px;
+    background-color: $shadow-color;
+    border: 1px solid $border-color;
+    @include border-radius(15px 15px 15px 15px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1520px) and (max-width: 1919px) {
+  .pro-team {
+    .pro-frame {
+      width: 229px;
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1520px) {
+  .pro-team {
+    .pro-frame {
+      width: 200px;
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pro-team {
+    .pro-frame {
+      width: 160px;
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 630px) and (max-width: 767px) {
+  .pro-team {
+    .pro-frame {
+      width: 160px;
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 430px) and (max-width: 629px) {
+  .pro-team {
+    .pro-frame {
+      width: 150px;
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 330px) and (max-width: 429px) {
+  .pro-team {
+    .pro-frame {
+      width: 150px;
+      height: 128px;
+    }
+  }
+}
+
+@media (max-width: 329px) {
+  .pro-team {
+    .pro-frame {
+      width: clamp(128px, 2.5vw, 210px);
+      height: 128px;
+    }
+  }
+}

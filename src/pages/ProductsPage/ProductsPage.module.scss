@@ -18,17 +18,21 @@
       justify-content: space-between;
 
       .title {
-        font-size: 3.2rem;
+        font-size: clamp(1.4rem, 2.2vw, 3.2rem);
       }
       .next-prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .prev,
         .next {
-          width: 44px;
-          height: 44px;
+          width: clamp(18px, 2.2vw, 44px);
+          height: clamp(18px, 2.2vw, 44px);
           color: black;
           background-color: white;
           border-radius: 90%;
-          margin-left: 18px;
+          margin-left: clamp(4px, 2.2vw, 18px);
         }
       }
     }
@@ -71,7 +75,7 @@
       .pro-box {
         .products {
           .pro-frame {
-            width: 220px;
+            width: 200px;
             height: 120px;
           }
         }
@@ -87,7 +91,7 @@
       .pro-box {
         .products {
           .pro-frame {
-            width: 180px;
+            width: 200px;
             height: 120px;
           }
         }
@@ -103,7 +107,7 @@
       .pro-box {
         .products {
           .pro-frame {
-            width: 120px;
+            width: 160px;
             height: 120px;
           }
         }
@@ -119,7 +123,7 @@
       .pro-box {
         .products {
           .pro-frame {
-            width: 120px;
+            width: 160px;
             height: 120px;
           }
         }
@@ -135,7 +139,7 @@
       .pro-box {
         .products {
           .pro-frame {
-            width: 200px;
+            width: 150px;
             height: 120px;
           }
         }
@@ -144,14 +148,30 @@
   }
 }
 
-@media (max-width: 429px) {
+@media (min-width: 330px) and (max-width: 429px) {
   .pro-page {
     .pro-team,
     .pro-cus {
       .pro-box {
         .products {
           .pro-frame {
-            width: 120px;
+            width: 220px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 329px) {
+  .pro-page {
+    .pro-team,
+    .pro-cus {
+      .pro-box {
+        .products {
+          .pro-frame {
+            width: 180px;
             height: 120px;
           }
         }
