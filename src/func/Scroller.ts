@@ -41,7 +41,7 @@ const Scroller = (
         if (nextIndex > maxScrollIndex()) {
           return 0;
         } else {
-          return nextIndex; // Di chuyển bình thường đến index tiếp theo
+          return nextIndex;
         }
       }
       return prevIndex;
@@ -55,7 +55,7 @@ const Scroller = (
 
   const transformValue = (): string => {
     const boxesPerSlide = calculateBoxesPerSlide();
-    const slideWidth = 100 / boxesPerSlide;
+    const slideWidth = boxesPerSlide > 0 ? 100 / boxesPerSlide : 0;
     return `translateX(-${scrollIndex * slideWidth}%)`;
   };
 
