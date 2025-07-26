@@ -1,29 +1,29 @@
 // Sản phẩm của Lazy Noize
 
 export const rapHipHop = [
-  { a1: "https://www.youtube.com/watch?v=W51hoTjX9XY" },
-  { a2: "https://www.youtube.com/watch?v=xaJy24wLZTQ" },
-  { a3: "https://www.youtube.com/watch?v=O33zCIEy69U" },
-  { a4: "https://www.youtube.com/watch?v=wPz22s1r6-8" },
-  { a5: "https://www.youtube.com/watch?v=czn3LDM8DYU" },
-  { a6: "https://www.youtube.com/watch?v=JzxW_yNH7pw" },
-  { a7: "https://www.youtube.com/watch?v=WjFd7D_Do7w" },
-  { a8: "https://www.youtube.com/watch?v=Db99mOWpt9k" },
-  { a9: "https://www.youtube.com/watch?v=JIgpyfVeiYM" },
-  { a10: "https://www.youtube.com/watch?v=nplJq6r6pIM" },
+  { id: "rHH1", url: "https://www.youtube.com/watch?v=W51hoTjX9XY" },
+  { id: "rHH2", url: "https://www.youtube.com/watch?v=xaJy24wLZTQ" },
+  { id: "rHH3", url: "https://www.youtube.com/watch?v=O33zCIEy69U" },
+  { id: "rHH4", url: "https://www.youtube.com/watch?v=wPz22s1r6-8" },
+  { id: "rHH5", url: "https://www.youtube.com/watch?v=czn3LDM8DYU" },
+  { id: "rHH6", url: "https://www.youtube.com/watch?v=JzxW_yNH7pw" },
+  { id: "rHH7", url: "https://www.youtube.com/watch?v=WjFd7D_Do7w" },
+  { id: "rHH8", url: "https://www.youtube.com/watch?v=Db99mOWpt9k" },
+  { id: "rHH9", url: "https://www.youtube.com/watch?v=JIgpyfVeiYM" },
+  { id: "rHH10", url: "https://www.youtube.com/watch?v=nplJq6r6pIM" },
 ];
 
 export const rnB = [
-  { c1: "https://www.youtube.com/watch?v=ITd4j9J7Lyo" },
-  { c2: "https://www.youtube.com/watch?v=mbytJZjEcL4" },
-  { c3: "https://www.youtube.com/watch?v=o6meB8NL26o" },
+  { id: "rnB1", url: "https://www.youtube.com/watch?v=ITd4j9J7Lyo" },
+  { id: "rnB2", url: "https://www.youtube.com/watch?v=mbytJZjEcL4" },
+  { id: "rnB3", url: "https://www.youtube.com/watch?v=o6meB8NL26o" },
 ];
 
 export const popBallad = [
-  { b1: "https://www.youtube.com/watch?v=dkY3qUzJ_Gw" },
+  { id: "popBallad1", url: "https://www.youtube.com/watch?v=dkY3qUzJ_Gw" },
 ];
 
 export const anothers = [
-  { d1: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
-  { d2: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
+  { id: "anothers1", url: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
+  { id: "anothers2", url: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
 ];

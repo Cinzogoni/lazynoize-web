@@ -7,7 +7,7 @@ type ScrollReturnType = {
   activeScroll: ScrollDirection;
 };
 
-const Scroller = (
+const useScroller = (
   initialArray: unknown[],
   initialWidth?: number
 ): ScrollReturnType => {
@@ -77,4 +77,4 @@ const Scroller = (
   };
 };
 
-export default Scroller;
+export default useScroller;

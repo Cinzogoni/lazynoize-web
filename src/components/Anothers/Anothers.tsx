@@ -12,10 +12,12 @@ import { anothers } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
-import Scroller from "../../func/Scroller";
+import useScroller from "../../hooks/useScroller";
+import useControlPlayer from "../../hooks/useControlPlayer";
 
 function Anothers() {
   const [windowWidth, setWindowWidth] = useState(0);
+  const { playingId, player } = useControlPlayer();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -23,7 +25,7 @@ function Anothers() {
     }
   }, []);
 
-  const { handleScroll, transformValue, activeScroll } = Scroller(
+  const { handleScroll, transformValue, activeScroll } = useScroller(
     anothers,
     windowWidth
   );
@@ -63,11 +65,10 @@ function Anothers() {
               transform: transformValue(),
             }}
           >
-            {anothers.map((url, index) => {
-              const videoLink = Object.values(url)[0];
+            {anothers.map((anothers) => {
               return (
                 <GridSystem
-                  key={index}
+                  key={anothers.id}
                   colClass={cx("col")}
                   colL={cx("l-2")}
                   colML={cx("ml-2")}
@@ -77,10 +78,15 @@ function Anothers() {
                   colMo={cx("mo-6")}
                   colMi={cx("mi-12")}
                 >
-                  <div className={cx("frame")}>
+                  <div
+                    className={cx("frame")}
+                    onClick={() => player(anothers.id)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <ReactPlayer
-                      url={videoLink}
-                      light={true}
+                      url={anothers.url}
+                      light={playingId !== anothers.id}
+                      playing={playingId === anothers.id}
                       width="97%"
                       height="89%"
                       controls={true}

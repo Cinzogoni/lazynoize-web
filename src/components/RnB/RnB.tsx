@@ -12,10 +12,12 @@ import { rnB } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
-import Scroller from "../../func/Scroller";
+import useScroller from "../../hooks/useScroller";
+import useControlPlayer from "../../hooks/useControlPlayer";
 
 function RnB() {
   const [windowWidth, setWindowWidth] = useState(0);
+  const { playingId, player } = useControlPlayer();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -23,7 +25,7 @@ function RnB() {
     }
   }, []);
 
-  const { handleScroll, transformValue, activeScroll } = Scroller(
+  const { handleScroll, transformValue, activeScroll } = useScroller(
     rnB,
     windowWidth
   );
@@ -63,11 +65,10 @@ function RnB() {
               transform: transformValue(),
             }}
           >
-            {rnB.map((url, index) => {
-              const videoLink = Object.values(url)[0];
+            {rnB.map((rnB) => {
               return (
                 <GridSystem
-                  key={index}
+                  key={rnB.id}
                   colClass={cx("col")}
                   colL={cx("l-2")}
                   colML={cx("ml-2")}
@@ -77,10 +78,15 @@ function RnB() {
                   colMo={cx("mo-6")}
                   colMi={cx("mi-12")}
                 >
-                  <div className={cx("frame")}>
+                  <div
+                    className={cx("frame")}
+                    onClick={() => player(rnB.id)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <ReactPlayer
-                      url={videoLink}
-                      light={true}
+                      url={rnB.url}
+                      light={playingId !== rnB.id}
+                      playing={playingId === rnB.id}
                       width="97%"
                       height="89%"
                       controls={true}
