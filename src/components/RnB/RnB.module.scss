@@ -51,6 +51,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+  }
+
+  &:hover .frame {
+    opacity: 0.5;
+  }
+
+  .frame:hover {
+    opacity: 1;
   }
 }
 

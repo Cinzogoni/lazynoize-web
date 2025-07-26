@@ -22,3 +22,8 @@ export const rnB = [
 export const popBallad = [
   { b1: "https://www.youtube.com/watch?v=dkY3qUzJ_Gw" },
 ];
+
+export const anothers = [
+  { d1: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
+  { d2: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
+];

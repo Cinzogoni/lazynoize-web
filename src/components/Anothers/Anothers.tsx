@@ -1,4 +1,4 @@
-import styles from "./PopBallad.module.scss";
+import styles from "./Anothers.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -8,13 +8,13 @@ import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import GridSystem from "../../styles/GridSystem";
 
-import { popBallad } from "../../data/dataLink";
+import { anothers } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
 import Scroller from "../../func/Scroller";
 
-function PopBallad() {
+function Anothers() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -24,14 +24,14 @@ function PopBallad() {
   }, []);
 
   const { handleScroll, transformValue, activeScroll } = Scroller(
-    popBallad,
+    anothers,
     windowWidth
   );
 
   return (
     <div className={cx("product")}>
       <div className={cx("scroll")}>
-        <h1 className={cx("title")}>Sản phẩm Pop/Ballad</h1>
+        <h1 className={cx("title")}>Sản phẩm khác</h1>
         <div className={cx("next-prev")}>
           <ArrowLeftOutlinedIcon
             className={cx("prev")}
@@ -63,7 +63,7 @@ function PopBallad() {
               transform: transformValue(),
             }}
           >
-            {popBallad.map((url, index) => {
+            {anothers.map((url, index) => {
               const videoLink = Object.values(url)[0];
               return (
                 <GridSystem
@@ -96,4 +96,4 @@ function PopBallad() {
   );
 }
 
-export default PopBallad;
+export default Anothers;

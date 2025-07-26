@@ -6,6 +6,7 @@ import { pageNameClasses } from "../../layouts/Header/Header";
 import RapHipHop from "../../components/RapHipHop/RapHipHop";
 import RnB from "../../components/RnB/RnB";
 import PopBallad from "../../components/PopBallad/PopBallad";
+import Anothers from "../../components/Anothers/Anothers";
 
 function ProductsPage() {
   return (
@@ -18,6 +19,9 @@ function ProductsPage() {
       </div>
       <div className={cx("frame")}>
         <PopBallad />
+      </div>
+      <div className={cx("frame")}>
+        <Anothers />
       </div>
     </div>
   );
