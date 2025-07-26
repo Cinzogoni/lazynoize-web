@@ -1,4 +1,4 @@
-import styles from "./ProOfLZ.module.scss";
+import styles from "./RnB.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -8,13 +8,13 @@ import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import GridSystem from "../../styles/GridSystem";
 
-import { productOfLZURLs } from "../../data/dataLink";
+import { rnB } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
 import Scroller from "../../func/Scroller";
 
-function ProOfLZ() {
+function RnB() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -24,14 +24,14 @@ function ProOfLZ() {
   }, []);
 
   const { handleScroll, transformValue, activeScroll } = Scroller(
-    productOfLZURLs,
+    rnB,
     windowWidth
   );
 
   return (
-    <div className={cx("pro-team")}>
+    <div className={cx("product")}>
       <div className={cx("scroll")}>
-        <h1 className={cx("title")}>Sản phẩm của Lazy Noize</h1>
+        <h1 className={cx("title")}>Sản phẩm RnB</h1>
         <div className={cx("next-prev")}>
           <ArrowLeftOutlinedIcon
             className={cx("prev")}
@@ -54,16 +54,16 @@ function ProOfLZ() {
         </div>
       </div>
 
-      <div className={cx("pro-boxes")}>
+      <div className={cx("boxes")}>
         <GridSystem rowClass={cx("row")}>
           <div
-            className={cx("pro-box")}
+            className={cx("box")}
             style={{
               transition: "transform 0.3s ease-in-out",
               transform: transformValue(),
             }}
           >
-            {productOfLZURLs.map((url, index) => {
+            {rnB.map((url, index) => {
               const videoLink = Object.values(url)[0];
               return (
                 <GridSystem
@@ -77,12 +77,12 @@ function ProOfLZ() {
                   colMo={cx("mo-6")}
                   colMi={cx("mi-12")}
                 >
-                  <div className={cx("pro-frame")}>
+                  <div className={cx("frame")}>
                     <ReactPlayer
                       url={videoLink}
                       light={true}
-                      width="98%"
-                      height="90%"
+                      width="97%"
+                      height="89%"
                       controls={true}
                     />
                   </div>
@@ -96,4 +96,4 @@ function ProOfLZ() {
   );
 }
 
-export default ProOfLZ;
+export default RnB;

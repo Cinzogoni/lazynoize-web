@@ -3,27 +3,21 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
-
-import ProOfLZ from "../../components/ProOfLZ/ProOfLZ";
+import RapHipHop from "../../components/RapHipHop/RapHipHop";
+import RnB from "../../components/RnB/RnB";
+import PopBallad from "../../components/PopBallad/PopBallad";
 
 function ProductsPage() {
   return (
     <div className={cx(pageNameClasses.pro)}>
-      <ProOfLZ />
-
-      <div className={cx("pro-cus")}>
-        <h1 className={cx("title")}>Sản phẩm sản xuất bởi Lazy Noize</h1>
-        <div className={cx("products")}></div>
+      <div className={cx("frame")}>
+        <RapHipHop />
       </div>
-
-      <div className={cx("pro-team")}>
-        <h1 className={cx("title")}>Music Video sản xuất bởi Lazy Noize</h1>
-        <div className={cx("products")}></div>
+      <div className={cx("frame")}>
+        <RnB />
       </div>
-
-      <div className={cx("pro-cus")}>
-        <h1 className={cx("title")}>Sản phẩm thu vocal tại Lazy Noize</h1>
-        <div className={cx("products")}></div>
+      <div className={cx("frame")}>
+        <PopBallad />
       </div>
     </div>
   );
