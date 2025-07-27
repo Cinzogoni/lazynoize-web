@@ -1,4 +1,4 @@
-import styles from "./Anothers.module.scss";
+import styles from "./Others.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -6,16 +6,19 @@ import ReactPlayer from "react-player";
 
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GridSystem from "../../styles/GridSystem";
 
-import { anothers } from "../../data/dataLink";
+import { others } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
 import { useControlPlayer } from "../../contexts/ControlPlayerContext";
+import { Link } from "react-router-dom";
+import routeURLs from "../../routes/routes";
 
-function Anothers() {
+function Others() {
   const [windowWidth, setWindowWidth] = useState(0);
   const { playingId, handleControlPlayer } = useControlPlayer();
 
@@ -26,7 +29,7 @@ function Anothers() {
   }, []);
 
   const { handleScroll, transformValue, activeScroll } = useScroller(
-    anothers,
+    others,
     windowWidth
   );
 
@@ -65,10 +68,10 @@ function Anothers() {
               transform: transformValue(),
             }}
           >
-            {anothers.map((anothers) => {
+            {others.map((a) => {
               return (
                 <GridSystem
-                  key={anothers.id}
+                  key={a.id}
                   colClass={cx("col")}
                   colL={cx("l-2")}
                   colML={cx("ml-2")}
@@ -80,17 +83,26 @@ function Anothers() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => handleControlPlayer(anothers.id)}
+                    onClick={() => handleControlPlayer(a.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer
-                      url={anothers.url}
-                      light={playingId !== anothers.id}
-                      playing={playingId === anothers.id}
+                      url={a.url}
+                      light={playingId !== a.id}
+                      playing={playingId === a.id}
                       width="97%"
                       height="89%"
                       controls={true}
                     />
+
+                    <Link
+                      to={routeURLs.services}
+                      target="_blank"
+                      className={cx("tooltip")}
+                    >
+                      <h2 className={cx("tooltip-text")}>Gói: {a.package}</h2>
+                      <OpenInNewIcon className={cx("tooltip-link")} />
+                    </Link>
                   </div>
                 </GridSystem>
               );
@@ -102,4 +114,4 @@ function Anothers() {
   );
 }
 
-export default Anothers;
+export default Others;

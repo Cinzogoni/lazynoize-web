@@ -4,14 +4,20 @@ const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
 
+const services = [
+  { id: "1", package: "Sản phẩm gói Pro" },
+  { id: "2", package: "Sản phẩm gói Semi-Pro" },
+  { id: "3", package: "Sản phẩm gói Basic" },
+];
+
 function ServicesPage() {
   return (
     <div className={cx(pageNameClasses.ser)}>
       <h1 className={cx("title")}>Dịch vụ của chúng tôi</h1>
       <div className={cx("frame")}>
-        <div className={cx("ser-A")}></div>
-        <div className={cx("ser-B")}></div>
-        <div className={cx("ser-C")}></div>
+        {services.map(() => {
+          return <div className={cx("levels")}></div>;
+        })}
       </div>
     </div>
   );

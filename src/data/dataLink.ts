@@ -53,17 +53,41 @@ export const rapHipHop = [
   },
 ];
 
-export const rnB = [
-  { id: "rnB1", url: "https://www.youtube.com/watch?v=ITd4j9J7Lyo" },
-  { id: "rnB2", url: "https://www.youtube.com/watch?v=mbytJZjEcL4" },
-  { id: "rnB3", url: "https://www.youtube.com/watch?v=o6meB8NL26o" },
-  { id: "rnB4", url: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
+export const rnBMelodic = [
+  {
+    id: "rnB1",
+    url: "https://www.youtube.com/watch?v=ITd4j9J7Lyo",
+    package: "A",
+  },
+  {
+    id: "rnB2",
+    url: "https://www.youtube.com/watch?v=mbytJZjEcL4",
+    package: "A",
+  },
+  {
+    id: "rnB3",
+    url: "https://www.youtube.com/watch?v=o6meB8NL26o",
+    package: "A",
+  },
+  {
+    id: "rnB4",
+    url: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc",
+    package: "A",
+  },
 ];
 
 export const popBallad = [
-  { id: "popBallad1", url: "https://www.youtube.com/watch?v=dkY3qUzJ_Gw" },
+  {
+    id: "popBallad1",
+    url: "https://www.youtube.com/watch?v=dkY3qUzJ_Gw",
+    package: "A",
+  },
 ];
 
-export const anothers = [
-  { id: "anothers1", url: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
+export const others = [
+  {
+    id: "others1",
+    url: "https://www.youtube.com/watch?v=ZvtJicroxmg",
+    package: "A",
+  },
 ];

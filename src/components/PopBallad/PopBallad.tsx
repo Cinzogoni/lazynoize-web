@@ -6,6 +6,7 @@ import ReactPlayer from "react-player";
 
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GridSystem from "../../styles/GridSystem";
 
 import { popBallad } from "../../data/dataLink";
@@ -14,6 +15,8 @@ import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
 import { useControlPlayer } from "../../contexts/ControlPlayerContext";
+import { Link } from "react-router-dom";
+import routeURLs from "../../routes/routes";
 
 function PopBallad() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -65,10 +68,10 @@ function PopBallad() {
               transform: transformValue(),
             }}
           >
-            {popBallad.map((popBallad) => {
+            {popBallad.map((popB) => {
               return (
                 <GridSystem
-                  key={popBallad.id}
+                  key={popB.id}
                   colClass={cx("col")}
                   colL={cx("l-2")}
                   colML={cx("ml-2")}
@@ -80,17 +83,28 @@ function PopBallad() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => handleControlPlayer(popBallad.id)}
+                    onClick={() => handleControlPlayer(popB.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer
-                      url={popBallad.url}
-                      light={playingId !== popBallad.id}
-                      playing={playingId === popBallad.id}
+                      url={popB.url}
+                      light={playingId !== popB.id}
+                      playing={playingId === popB.id}
                       width="97%"
                       height="89%"
                       controls={true}
                     />
+
+                    <Link
+                      to={routeURLs.services}
+                      target="_blank"
+                      className={cx("tooltip")}
+                    >
+                      <h2 className={cx("tooltip-text")}>
+                        Gói: {popB.package}
+                      </h2>
+                      <OpenInNewIcon className={cx("tooltip-link")} />
+                    </Link>
                   </div>
                 </GridSystem>
               );

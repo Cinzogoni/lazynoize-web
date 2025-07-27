@@ -4,9 +4,9 @@ const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
 import RapHipHop from "../../components/RapHipHop/RapHipHop";
-import RnB from "../../components/RnBMelodic/RnB";
+import RnBMelodic from "../../components/RnBMelodic/RnBMelodic";
 import PopBallad from "../../components/PopBallad/PopBallad";
-import Anothers from "../../components/Anothers/Anothers";
+import Others from "../../components/Others/Others";
 
 function ProductsPage() {
   return (
@@ -15,13 +15,13 @@ function ProductsPage() {
         <RapHipHop />
       </div>
       <div className={cx("frame")}>
-        <RnB />
+        <RnBMelodic />
       </div>
       <div className={cx("frame")}>
         <PopBallad />
       </div>
       <div className={cx("frame")}>
-        <Anothers />
+        <Others />
       </div>
     </div>
   );

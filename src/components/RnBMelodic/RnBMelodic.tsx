@@ -1,4 +1,4 @@
-import styles from "./RnB.module.scss";
+import styles from "./RnBMelodic.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -6,16 +6,19 @@ import ReactPlayer from "react-player";
 
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GridSystem from "../../styles/GridSystem";
 
-import { rnB } from "../../data/dataLink";
+import { rnBMelodic } from "../../data/dataLink";
 
 import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
 import { useControlPlayer } from "../../contexts/ControlPlayerContext";
+import { Link } from "react-router-dom";
+import routeURLs from "../../routes/routes";
 
-function RnB() {
+function RnBMelodic() {
   const [windowWidth, setWindowWidth] = useState(0);
   const { playingId, handleControlPlayer } = useControlPlayer();
 
@@ -26,7 +29,7 @@ function RnB() {
   }, []);
 
   const { handleScroll, transformValue, activeScroll } = useScroller(
-    rnB,
+    rnBMelodic,
     windowWidth
   );
 
@@ -65,10 +68,10 @@ function RnB() {
               transform: transformValue(),
             }}
           >
-            {rnB.map((rnB) => {
+            {rnBMelodic.map((rnBM) => {
               return (
                 <GridSystem
-                  key={rnB.id}
+                  key={rnBM.id}
                   colClass={cx("col")}
                   colL={cx("l-2")}
                   colML={cx("ml-2")}
@@ -80,17 +83,28 @@ function RnB() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => handleControlPlayer(rnB.id)}
+                    onClick={() => handleControlPlayer(rnBM.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer
-                      url={rnB.url}
-                      light={playingId !== rnB.id}
-                      playing={playingId === rnB.id}
+                      url={rnBM.url}
+                      light={playingId !== rnBM.id}
+                      playing={playingId === rnBM.id}
                       width="97%"
                       height="89%"
                       controls={true}
                     />
+
+                    <Link
+                      to={routeURLs.services}
+                      target="_blank"
+                      className={cx("tooltip")}
+                    >
+                      <h2 className={cx("tooltip-text")}>
+                        Gói: {rnBM.package}
+                      </h2>
+                      <OpenInNewIcon className={cx("tooltip-link")} />
+                    </Link>
                   </div>
                 </GridSystem>
               );
@@ -102,4 +116,4 @@ function RnB() {
   );
 }
 
-export default RnB;
+export default RnBMelodic;
