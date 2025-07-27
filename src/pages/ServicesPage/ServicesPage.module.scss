@@ -2,10 +2,44 @@
 
 .ser-page {
   width: 100%;
-  max-width: calc(100% - 32px);
+  max-width: calc(100% - 16px);
   height: 100%;
-  max-height: calc(100% - 32px);
+  max-height: calc(100% - 16px);
   background-color: $page-bg-color;
   @include border-radius(12px 12px 12px 12px);
-  padding: 32px;
+  padding: 16px;
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $shadow-color;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 6px;
+  }
+
+  .title {
+    font-size: 3.2rem;
+  }
+
+  .frame {
+    width: 100%;
+    height: 100%;
+    margin: 9px;
+    display: flex;
+    justify-content: space-around;
+
+    .ser-A,
+    .ser-B,
+    .ser-C {
+      width: 570px;
+      background-color: bisque;
+    }
+  }
 }

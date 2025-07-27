@@ -6,6 +6,7 @@ import ReactPlayer from "react-player";
 
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GridSystem from "../../styles/GridSystem";
 
 import { rapHipHop } from "../../data/dataLink";
@@ -14,6 +15,8 @@ import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
 import { useControlPlayer } from "../../contexts/ControlPlayerContext";
+import { Link } from "react-router-dom";
+import routeURLs from "../../routes/routes";
 
 function RapHipHop() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -91,6 +94,15 @@ function RapHipHop() {
                       height="89%"
                       controls={true}
                     />
+
+                    <Link
+                      to={routeURLs.services}
+                      target="_blank"
+                      className={cx("tooltip")}
+                    >
+                      <h2 className={cx("tooltip-text")}>Gói: {rHH.package}</h2>
+                      <OpenInNewIcon className={cx("tooltip-link")} />
+                    </Link>
                   </div>
                 </GridSystem>
               );
