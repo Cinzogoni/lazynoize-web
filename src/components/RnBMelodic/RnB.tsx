@@ -13,11 +13,11 @@ import { rnB } from "../../data/dataLink";
 import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
-import useControlPlayer from "../../hooks/useControlPlayer";
+import { useControlPlayer } from "../../contexts/ControlPlayerContext";
 
 function RnB() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const { playingId, player } = useControlPlayer();
+  const { playingId, handleControlPlayer } = useControlPlayer();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -33,7 +33,7 @@ function RnB() {
   return (
     <div className={cx("product")}>
       <div className={cx("scroll")}>
-        <h1 className={cx("title")}>Sản phẩm RnB</h1>
+        <h1 className={cx("title")}>Sản phẩm RnB/Melodic</h1>
         <div className={cx("next-prev")}>
           <ArrowLeftOutlinedIcon
             className={cx("prev")}
@@ -80,7 +80,7 @@ function RnB() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => player(rnB.id)}
+                    onClick={() => handleControlPlayer(rnB.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer

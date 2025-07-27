@@ -2,7 +2,7 @@ import styles from "./IntroducePage.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
-import { useTransPage } from "../../provider/PageTransContext";
+import { useTransPage } from "../../contexts/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
 import { useState } from "react";
 

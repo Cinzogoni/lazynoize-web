@@ -13,11 +13,11 @@ import { anothers } from "../../data/dataLink";
 import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
-import useControlPlayer from "../../hooks/useControlPlayer";
+import { useControlPlayer } from "../../contexts/ControlPlayerContext";
 
 function Anothers() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const { playingId, player } = useControlPlayer();
+  const { playingId, handleControlPlayer } = useControlPlayer();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -80,7 +80,7 @@ function Anothers() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => player(anothers.id)}
+                    onClick={() => handleControlPlayer(anothers.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer

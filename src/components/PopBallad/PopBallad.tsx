@@ -13,11 +13,11 @@ import { popBallad } from "../../data/dataLink";
 import { useState, useEffect } from "react";
 
 import useScroller from "../../hooks/useScroller";
-import useControlPlayer from "../../hooks/useControlPlayer";
+import { useControlPlayer } from "../../contexts/ControlPlayerContext";
 
 function PopBallad() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const { playingId, player } = useControlPlayer();
+  const { playingId, handleControlPlayer } = useControlPlayer();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -80,7 +80,7 @@ function PopBallad() {
                 >
                   <div
                     className={cx("frame")}
-                    onClick={() => player(popBallad.id)}
+                    onClick={() => handleControlPlayer(popBallad.id)}
                     style={{ cursor: "pointer" }}
                   >
                     <ReactPlayer

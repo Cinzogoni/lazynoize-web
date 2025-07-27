@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 import { Link } from "react-router-dom";
 import routeURLs from "../../routes/routes";
 
-import { useTransPage } from "../../provider/PageTransContext";
+import { useTransPage } from "../../contexts/PageTransContext";
 
 export const pageNameClasses = {
   int: "int-page",

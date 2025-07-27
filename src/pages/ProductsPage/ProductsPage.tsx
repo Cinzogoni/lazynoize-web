@@ -4,7 +4,7 @@ const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
 import RapHipHop from "../../components/RapHipHop/RapHipHop";
-import RnB from "../../components/RnB/RnB";
+import RnB from "../../components/RnBMelodic/RnB";
 import PopBallad from "../../components/PopBallad/PopBallad";
 import Anothers from "../../components/Anothers/Anothers";
 

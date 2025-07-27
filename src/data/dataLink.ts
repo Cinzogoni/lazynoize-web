@@ -17,6 +17,7 @@ export const rnB = [
   { id: "rnB1", url: "https://www.youtube.com/watch?v=ITd4j9J7Lyo" },
   { id: "rnB2", url: "https://www.youtube.com/watch?v=mbytJZjEcL4" },
   { id: "rnB3", url: "https://www.youtube.com/watch?v=o6meB8NL26o" },
+  { id: "rnB4", url: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
 ];
 
 export const popBallad = [
@@ -24,6 +25,5 @@ export const popBallad = [
 ];
 
 export const anothers = [
-  { id: "anothers1", url: "https://www.youtube.com/watch?v=R1QDoHJ4ZZc" },
-  { id: "anothers2", url: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
+  { id: "anothers1", url: "https://www.youtube.com/watch?v=ZvtJicroxmg" },
 ];
