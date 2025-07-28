@@ -4,20 +4,50 @@ const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
 
+import { Fragment, useState } from "react";
+import Records from "../../components/Records/Records";
+
 const services = [
-  { id: "1", package: "Sản phẩm gói Pro" },
-  { id: "2", package: "Sản phẩm gói Semi-Pro" },
-  { id: "3", package: "Sản phẩm gói Basic" },
+  { id: "1", package: "records", title: "Thu âm" },
+  { id: "2", package: "beat", title: "Hoà âm phối khí" },
+  { id: "3", package: "rent", title: "Cho Thuê" },
+  { id: "4", package: "media", title: "Media" },
 ];
 
 function ServicesPage() {
+  const [activePackage, setActivePackage] = useState(services[0].package);
+
   return (
     <div className={cx(pageNameClasses.ser)}>
-      <h1 className={cx("title")}>Dịch vụ của chúng tôi</h1>
       <div className={cx("frame")}>
-        {services.map(() => {
-          return <div className={cx("levels")}></div>;
+        {services.map((title) => {
+          return (
+            <h1
+              key={title.id}
+              className={cx("title", {
+                "active-title": title.package === activePackage,
+              })}
+              onClick={() => setActivePackage(title.package)}
+            >
+              {title.title}
+            </h1>
+          );
         })}
+      </div>
+      <div className={cx("tab-container")}>
+        {activePackage === "records" ? (
+          <div className={cx("tab")}>
+            <Records />
+          </div>
+        ) : activePackage === "beat" ? (
+          <div className={cx("tab")}></div>
+        ) : activePackage === "rent" ? (
+          <div className={cx("tab")}></div>
+        ) : activePackage === "media" ? (
+          <div className={cx("tab")}></div>
+        ) : (
+          <Fragment />
+        )}
       </div>
     </div>
   );

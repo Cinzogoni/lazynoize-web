@@ -1,0 +1,32 @@
+@use "/src/styles/variable.scss" as *;
+
+.wrapper {
+  width: 100%;
+  height: 97vh;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 6px;
+  }
+
+  .boxes {
+    width: 351px;
+    height: 100%;
+    margin: 6px;
+    background-color: $shadow-color;
+  }
+}
