@@ -19,12 +19,12 @@ function Header() {
 
   return (
     <div className={cx("header-frame")}>
-      <div className={cx("img")}>
+      <Link to={routeURLs.home} className={cx("img")}>
         <img src="/public/assets/img/logo.png" className={cx("logo")} />
-      </div>
+      </Link>
 
       <div className={cx("navbar")}>
-        <Link to={routeURLs.home}>
+        <Link to={routeURLs.aboutUs}>
           <h1
             className={cx(pageNameClasses.int)}
             onClick={() => handleTransitionPage(pageNameClasses.int)}

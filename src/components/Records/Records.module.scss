@@ -3,6 +3,9 @@
 .wrapper {
   width: 100%;
   height: 97vh;
+  margin-left: 4px;
+  padding: 24px;
+  @include border-radius(15px 15px 15px 15px);
 
   display: flex;
   justify-content: space-around;
@@ -27,6 +30,66 @@
     width: 351px;
     height: 100%;
     margin: 6px;
-    background-color: $shadow-color;
+    padding: 12px;
+    background-color: $frame-color;
+    @include border-radius(15px 15px 15px 15px);
+
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .top-title {
+        height: 60px;
+        font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+        background-color: $box-color;
+        padding: 0 6px;
+        @include border-radius(8px 8px 8px 8px);
+        box-shadow: 0px 0px 5px $box-shadow;
+
+        display: flex;
+        align-items: center;
+      }
+
+      .price {
+        font-size: clamp(3.2rem, 3.2vw, 4.8rem);
+        color: $primary-text-color;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .mid {
+      width: 100%;
+      flex: 2;
+      border-top: 1px solid $box-color;
+      border-bottom: 1px solid $box-color;
+      padding: 12px;
+
+      .desc {
+        color: $primary-text-color;
+        font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+        margin: 12px 0;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      flex: 1;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    .boxes {
+      width: 19%;
+    }
   }
 }

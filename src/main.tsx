@@ -4,15 +4,12 @@ import GlobalStyles from "./styles/GlobalStyles.tsx";
 
 import { PageTransProvider } from "./contexts/PageTransContext.tsx";
 import { ControlPlayerProvider } from "./contexts/ControlPlayerContext.tsx";
-import { ServicesProvider } from "./contexts/ServicesContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <PageTransProvider>
     <GlobalStyles>
       <ControlPlayerProvider>
-        <ServicesProvider>
-          <App />
-        </ServicesProvider>
+        <App />
       </ControlPlayerProvider>
     </GlobalStyles>
   </PageTransProvider>
