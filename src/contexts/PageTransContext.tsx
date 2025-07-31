@@ -33,8 +33,6 @@ export function PageTransProvider({ children }: PageTransProviderProps) {
     handleTransitionPage,
   };
 
-  //   console.log("Check currentPageID: ", currentPageId);
-
   return (
     <TransitionContext.Provider value={contextValue}>
       {children}

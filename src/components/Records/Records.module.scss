@@ -11,6 +11,12 @@
   justify-content: space-around;
   flex-wrap: wrap;
 
+  opacity: 0;
+
+  &.active-tab {
+    animation: fadeIn 0.25s ease-in forwards;
+  }
+
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -91,5 +97,14 @@
     .boxes {
       width: 19%;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

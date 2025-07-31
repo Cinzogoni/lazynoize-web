@@ -4,14 +4,27 @@ const cx = classNames.bind(styles);
 
 import { useTransPage } from "../../contexts/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function IntroducePage() {
   const { currentPageId } = useTransPage();
-  const [visible, IsVisible] = useState<boolean>(false);
+
+  const [showPageAnimation, setShowPageAnimation] = useState(false);
+
+  useEffect(() => {
+    setShowPageAnimation(true);
+
+    return () => {
+      setShowPageAnimation(false);
+    };
+  }, []);
 
   return (
-    <div className={cx(pageNameClasses.int)}>
+    <div
+      className={cx(pageNameClasses.int, {
+        "active-transition": showPageAnimation,
+      })}
+    >
       <h1
         style={{
           fontSize: "3.2rem",

@@ -4,7 +4,7 @@ const cx = classNames.bind(styles);
 
 import { pageNameClasses } from "../../layouts/Header/Header";
 
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Records from "../../components/Records/Records";
 
 const services = [
@@ -16,9 +16,23 @@ const services = [
 
 function ServicesPage() {
   const [activePackage, setActivePackage] = useState(services[0].package);
+  const [showPageAnimation, setShowPageAnimation] = useState(false);
+
+  useEffect(() => {
+    setShowPageAnimation(true);
+
+    return () => {
+      setShowPageAnimation(false);
+    };
+  }, []);
 
   return (
-    <div className={cx(pageNameClasses.ser)}>
+    <div
+      className={cx(pageNameClasses.ser, {
+        "active-transition": showPageAnimation,
+      })}
+      style={{}}
+    >
       <div className={cx("frame")}>
         {services.map((title) => {
           return (
