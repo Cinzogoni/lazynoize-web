@@ -6,6 +6,7 @@ import { pageNameClasses } from "../../layouts/Header/Header";
 
 import { Fragment, useState, useEffect } from "react";
 import Records from "../../components/Records/Records";
+import Rents from "../../components/Rents/Rents";
 
 const services = [
   { id: "1", package: "records", title: "Thu âm" },
@@ -56,7 +57,9 @@ function ServicesPage() {
         ) : activePackage === "beat" ? (
           <div className={cx("tab")}></div>
         ) : activePackage === "rent" ? (
-          <div className={cx("tab")}></div>
+          <div className={cx("tab")}>
+            <Rents />
+          </div>
         ) : activePackage === "media" ? (
           <div className={cx("tab")}></div>
         ) : (

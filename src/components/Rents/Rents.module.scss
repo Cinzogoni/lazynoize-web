@@ -11,8 +11,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
 
-  opacity: 0;
-
   &.active-tab {
     animation: fadeIn 0.25s ease-in forwards;
   }
@@ -32,8 +30,8 @@
     border-radius: 6px;
   }
 
-  .boxes {
-    width: 351px;
+  .frame {
+    width: 450px;
     height: 100%;
     margin: 6px;
     padding: 12px;
@@ -94,8 +92,8 @@
 
 @media (min-width: 1920px) {
   .wrapper {
-    .boxes {
-      width: 19%;
+    .frame {
+      width: 32%;
     }
   }
 }
