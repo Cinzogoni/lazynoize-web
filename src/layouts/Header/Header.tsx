@@ -20,6 +20,7 @@ function Header() {
   return (
     <div className={cx("header-frame")}>
       <Link to={routeURLs.home} className={cx("img")}>
+        {/* ĐƯỜNG DẪN DEPLOY  */}
         <img src="/lazynoize-web/assets/img/logo.png" className={cx("logo")} />
       </Link>
 
