@@ -6,6 +6,7 @@
   margin-left: 8px;
   padding: 24px;
   @include border-radius(15px 15px 15px 15px);
+  opacity: 0;
 
   display: flex;
   justify-content: space-around;

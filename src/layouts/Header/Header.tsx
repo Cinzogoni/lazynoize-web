@@ -7,8 +7,6 @@ import routeURLs from "../../routes/routes";
 
 import { useTransPage } from "../../contexts/PageTransContext";
 
-import logo from "../../../public/assets/img/logo.png";
-
 export const pageNameClasses = {
   int: "int-page",
   pro: "pro-page",
@@ -22,7 +20,10 @@ function Header() {
   return (
     <div className={cx("header-frame")}>
       <Link to={routeURLs.home} className={cx("img")}>
-        <img src={logo} className={cx("logo")} />
+        <img
+          src="/lazynoize-web/public/assets/img/logo.png"
+          className={cx("logo")}
+        />
       </Link>
 
       <div className={cx("navbar")}>
