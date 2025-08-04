@@ -2,12 +2,12 @@ import styles from "./IntroducePage.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
-import { useTransPage } from "../../contexts/PageTransContext";
+// import { useTransPage } from "../../contexts/PageTransContext";
 import { pageNameClasses } from "../../layouts/Header/Header";
 import { useState, useEffect } from "react";
 
 function IntroducePage() {
-  const { currentPageId } = useTransPage();
+  // const { currentPageId } = useTransPage();
 
   const [showPageAnimation, setShowPageAnimation] = useState(false);
 
