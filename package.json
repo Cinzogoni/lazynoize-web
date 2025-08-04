@@ -2,7 +2,7 @@
   "name": "lazynoize-web",
   "private": true,
   "version": "0.0.0",
-  "homepage": "/",
+  "homepage": "https://cinzogoni.github.io/lazynoize-web/",
   "type": "module",
   "scripts": {
     "dev": "vite",
