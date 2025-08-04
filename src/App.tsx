@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
-    <BrowserRouter basename="/lazynoize-web">
+    <BrowserRouter>
       <div className="app">
         <Routes>
           <Route>

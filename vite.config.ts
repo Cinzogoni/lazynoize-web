@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/lazynoize-web/",
+  base: "/",
   plugins: [react()],
   server: {
     port: 3002,
