@@ -21,7 +21,11 @@ function Header() {
     <div className={cx("header-frame")}>
       <Link to={routeURLs.home} className={cx("img")}>
         {/* ĐƯỜNG DẪN DEPLOY  */}
-        <img src="/lazynoize-web/assets/img/logo.png" className={cx("logo")} />
+        <img
+          src="/lazynoize-web/assets/img/logo.png"
+          alt="logo"
+          className={cx("logo")}
+        />
       </Link>
 
       <div className={cx("navbar")}>
