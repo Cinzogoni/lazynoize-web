@@ -12,7 +12,8 @@
     width: 100%;
     min-height: 100px;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0px 10px 20px $shadow-color;
+    box-shadow: 55px -25px 80px $shadow-color;
+    z-index: 10;
   }
 
   .main-wrapper {
@@ -44,7 +45,8 @@
   width: 100%;
   min-height: 50px;
   background-color: rgb(0, 0, 0);
-  box-shadow: 55px 5px 80px $shadow-color;
+  box-shadow: 55px 25px 80px $shadow-color;
   display: flex;
   justify-content: center;
+  z-index: 10;
 }

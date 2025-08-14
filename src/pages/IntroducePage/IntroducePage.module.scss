@@ -2,30 +2,52 @@
 
 .int-page {
   width: 100%;
+  max-width: 1280px;
   height: 100%;
   background-color: $page-bg-color;
-
   padding: 16px;
   opacity: 0;
+  @include border-radius(12px 12px 12px 12px);
 
   &.active-transition {
     animation: fadeIn 0.25s ease-in forwards;
   }
 
+  .CRUD {
+    width: 200px;
+    height: 65px;
+    background-color: $frame-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include border-radius(12px 12px 12px 12px);
+    margin: 0 0 12px auto;
+    cursor: pointer;
+
+    .EDIT {
+      font-size: clamp(2.4rem, 2.2vw, 3.2rem);
+      color: $primary-text-color;
+    }
+  }
+
   .frame {
     .title {
-      font-size: clamp(1.6rem, 2.2vw, 3.2rem);
+      font-size: clamp(2.4rem, 2.2vw, 3.2rem);
       margin: 6px 0;
     }
 
     .desc {
-      font-size: clamp(1.2rem, 2.2vw, 2.4rem);
+      font-size: clamp(1.2rem, 2.2vw, 2rem);
       margin: 12px 0;
+
+      .packages {
+        margin-left: 12px;
+      }
     }
 
     .img {
       width: 100%;
-      height: 600px;
+      max-height: 600px;
       object-fit: cover;
       margin-bottom: 16px;
       @include border-radius(12px 12px 12px 12px);
